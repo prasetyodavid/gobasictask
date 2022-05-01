@@ -6,14 +6,14 @@ import (
 )
 
 func main() {
-	//soalpertama()
-	//soalkedua()
-	//soalketiga()
-	//soalkeempat()
-	//soalkelima()
-	//soalkeenam()
-	//soalketujuh()
-	//soalkedelapan()
+	soalpertama()
+	soalkedua()
+	soalketiga()
+	soalkeempat()
+	soalkelima()
+	soalkeenam()
+	soalketujuh()
+	soalkedelapan()
 }
 
 func soalpertama() {
