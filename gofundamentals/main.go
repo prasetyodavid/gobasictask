@@ -2,7 +2,8 @@ package main
 
 import (
 	"fmt"
-	"gofundamentals/helper"
+	"gobasictask/gofundamentals/helper"
+	"math"
 	"reflect"
 	"strconv"
 )
@@ -37,6 +38,8 @@ func main() {
 		quiz1()
 	case "11":
 		stringLoop()
+	case "12":
+		multipleReturnFunc()
 	default:
 		fmt.Println(optstr)
 	}
@@ -89,7 +92,7 @@ func operatorLogic() {
 
 func sampleArray() {
 	/* Arrays */
-	var arr [10]string
+	var arr [11]string
 	x := [5]int{1, 3, 5, 6, 3}
 	y := [5]int{7, 4, 3}
 	arr[2] = "array ke-dua"
@@ -237,4 +240,16 @@ func stringLoop() {
 	for pos, char := range sentence {
 		fmt.Printf("character %c start at byte position %d \n", char, pos)
 	}
+}
+
+func calculateCircle(diameter float64) (float64, float64) {
+	var keliling = math.Pi * math.Pow(diameter, 2)
+	var luas = math.Pi * diameter
+	return keliling, luas
+}
+
+func multipleReturnFunc() {
+	diameter := 5.0
+	keliling, luas := calculateCircle(diameter)
+	fmt.Println(keliling, luas)
 }
