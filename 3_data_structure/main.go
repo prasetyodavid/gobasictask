@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	//arraymerge
+	//problem 1 - arraymerge
 	fmt.Println(arrayMerge([]string{"king", "jin"}, []string{"eddie", "steve"}))
 	fmt.Println(arrayMerge([]string{"king", "jin", "yoshimitsu"}, []string{"eddie", "jin", "yoshimitsu", "gon"}))
 	//problem 2 - angka muncul sekali
@@ -16,6 +16,10 @@ func main() {
 	fmt.Println(munculSekali("76523752"))
 	fmt.Println(munculSekali("12345"))
 	fmt.Println(munculSekali("1122334455"))
+
+	//
+	pairSum([]int{1, 2, 3, 4, 6}, 6)
+	pairSum([]int{4, 3, 6, 7, 8, 1, 9}, 100)
 }
 
 func appendUnique(slice []string, i string) []string {
@@ -70,4 +74,17 @@ func munculSekali(nums string) (arr []int) {
 	}
 	arr = onetimes
 	return arr
+}
+
+func pairSum(arr []int, sum int) {
+	mapping := make(map[int]int)
+	for i := 0; i < len(arr); i++ {
+		if mapping[sum-arr[i]] == 0 {
+			mapping[arr[i]] = i
+		} else {
+			fmt.Printf("Pair for given sum is (%d, %d).\n", arr[mapping[sum-arr[i]]], arr[i])
+			return
+		}
+	}
+	fmt.Println("Pair not found in given array.")
 }
