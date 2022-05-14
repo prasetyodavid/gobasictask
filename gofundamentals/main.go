@@ -40,6 +40,8 @@ func main() {
 		stringLoop()
 	case "12":
 		multipleReturnFunc()
+	case "13":
+		pointer()
 	default:
 		fmt.Println(optstr)
 	}
@@ -252,4 +254,21 @@ func multipleReturnFunc() {
 	diameter := 5.0
 	keliling, luas := calculateCircle(diameter)
 	fmt.Println(keliling, luas)
+}
+
+func pointer() {
+	var name = "Jhonny"
+	var nameAddress *string = &name //point to name
+
+	fmt.Println("name (value) ", name)
+	fmt.Println("name (mem. address) ", &name)
+	fmt.Println("name (value) ", *nameAddress)
+	fmt.Println("name (mem. address) ", nameAddress)
+
+	name = "Depp"
+
+	fmt.Println("name (value) ", name)
+	fmt.Println("name (mem. address) ", &name)
+	fmt.Println("name (value) ", *nameAddress)
+	fmt.Println("name (mem. address) ", nameAddress)
 }
