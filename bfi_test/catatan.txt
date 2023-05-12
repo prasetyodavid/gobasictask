@@ -1,0 +1,56 @@
+case redis dipakai saat apa:
+- data yang sering diakses
+- data yang jarang berubah (misal banner promo)
+- butuh kecepatan tinggi memory
+- jangan cache data hasil pencarian (pakai solr / elastic)
+- jangan mengcache data aplikasi milik orang lain
+- cahce data kecil saja
+
+struktur redis:
+- key , value (json)
+
+https://roadmap.sh/java
+https://roadmap.sh/golang
+
+Non blocking IO req = Async
+
+Concurrency menjalankan dua tugas secara paralel pada thread berbeda. 
+Namun, metode asinkronus berjalan secara paralel tetapi pada 1 thread yang sama.
+
+------------------
+
+TPS (Transaction Processing System)
+ - Batch Proccessing
+   cth: pembayaran CC
+   -> payment gateway -> bank (verifikasi) -> merchant akan menerima uang -> bank akan menagih ke customer di bulan berikutnya (batch)
+ - Online Processing
+   -> transfer atm / qris / VA / tagihan listrik, pulsa dll
+   ----> produk akhir : Report , grafik
+
+
+yang pernah :
+ - Midtrans, Mcpay, 
+    selalu ada 2 env, sandbox & production
+ 
+ - di ciputra pernah 
+  - penerimaaan pembayaran dari salesforce / va mandiri / va bca
+    ----> produk akhir : journal , report
+	
+  - ke pembahasan h2h mandiri 
+    kasir input pembayaran
+	
+	
+	
+Jenis middleware :	
+	Basic Auth,Body Dump,Body Limit,Casbin Auth,CORS,CSRF,Decompress,Gzip,Jaeger,JWT,Key Auth,Logger,Method Override,Prometheus,Proxy,Rate Limiter,Recover,Redirect,Request ID,Rewrite,Secure,Session,Static,Timeout,Trailing Slash
+	
+	
+Design Pattern	
+-----------------------------
+singleton :
+cukup sekali  membuat objek, yang reuseable
+contoh, bikin koneksi db, helper
+
+builder:
+bikin classs dengan suffix Builder , contoh CustomerBuilder
+bikin setter nya
