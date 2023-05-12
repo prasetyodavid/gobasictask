@@ -1,3 +1,16 @@
+Key experience
+ - 
+ 
+kenapa mau masuk;
+- awalnya ditawarkan opportunity oleh mba Dinda Puspita via linkedin, lalu di reach oleh mba Judith
+- setelah saya mendengar penjelasannya, menarik karena tim IT nya katanya sudah banyak (banyak squad) dan masih menerapkan wfa
+- issue layoff di perusahaan sebelumnya
+- masih mau memperdalam golang/non-php dan banyak teknologi backend pendukungnya seperti rabbitmq, elastic, grpc, no-sql dll
+- dari sisi perusahaan : laporan keuangan masih mencetak laba
+  https://www.google.com/finance/quote/BFIN:IDX?hl=en&window=5Y
+
+------------------
+
 case redis dipakai saat apa:
 - data yang sering diakses
 - data yang jarang berubah (misal banner promo)
